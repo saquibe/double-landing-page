@@ -27,6 +27,7 @@ h1{
     cursor: pointer;
     margin-top: 50px;
     transition: 1s background-color;
+    white-space: nowrap;
 }
 .btn:hover{
     background-color: white;
@@ -40,6 +41,7 @@ h1{
     text-align: center;
     width: 50%;
     height: 100%;
+    overflow: hidden;
 }
 .split.left{
     position: absolute;
@@ -53,5 +55,20 @@ h1{
     right: 0;
     background-color: lightblue;
     background-image: url("https://m.media-amazon.com/images/I/413eZrKrgnL._SX300_SY300_QL70_FMwebp_.jpg");
-    background-size: contain;
+    background-size: cover;
+}
+.active-left .left{
+    width: 75%;
+}
+.active-left .right{
+    width: 25%;
+}
+.active-right .left{
+    width: 25%;
+}
+.active-right .right{
+    width: 75%;
+}
+.left , .right{
+    transition: width 1s ease-in-out;
 }
